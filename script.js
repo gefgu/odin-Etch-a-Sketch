@@ -1,14 +1,14 @@
-// Add variable for div.container
-// For loop - loop 16 times
-// Nested For loop -loop 16 times
-// Inside the nested for loop create tile and append to container
 function createGrid() {
-
+    const container = document.querySelector(".container");
+    for (let i = 0; i < 16; i++) {
+        for (let k = 0; k < 16; k++) {
+            container.appendChild(createTile());
+        }
+    }
 }
 
-// create div element
-// add class "tile"
-// return div element with class
 function createTile() {
-
+    const tile = document.createElement("div");
+    tile.classList.add("tile");
+    return tile;
 }
