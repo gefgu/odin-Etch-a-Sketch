@@ -12,3 +12,5 @@ function createTile() {
     tile.classList.add("tile");
     return tile;
 }
+
+createGrid();
