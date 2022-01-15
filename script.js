@@ -18,4 +18,11 @@ function makeActive() {
     this.classList.add("active");
 }
 
+function clearGrid() {
+    const activeTiles = document.querySelectorAll(".tile.active");
+    activeTiles.forEach(tile => tile.classList.remove("active"));
+}
+
 createGrid();
+const clearButton = document.querySelector(".clear-button");
+clearButton.addEventListener("click", clearGrid);
