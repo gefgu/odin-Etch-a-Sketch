@@ -10,7 +10,12 @@ function createGrid() {
 function createTile() {
     const tile = document.createElement("div");
     tile.classList.add("tile");
+    tile.addEventListener("mouseenter", makeActive);
     return tile;
+}
+
+function makeActive() {
+    this.classList.add("active");
 }
 
 createGrid();

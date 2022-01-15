@@ -23,4 +23,9 @@ body {
     width: var(--tile-size);
     height: var(--tile-size);
     margin: 1px;
+    transition: background-color 0.125s;
+}
+
+.tile.active {
+    background-color: blue;
 }
