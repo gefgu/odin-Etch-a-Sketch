@@ -1,7 +1,7 @@
-function createGrid() {
+function createGrid(size) {
     const container = document.querySelector(".container");
-    for (let i = 0; i < 16; i++) {
-        for (let k = 0; k < 16; k++) {
+    for (let i = 0; i < size; i++) {
+        for (let k = 0; k < size; k++) {
             container.appendChild(createTile());
         }
     }
@@ -19,10 +19,12 @@ function makeActive() {
 }
 
 function clearGrid() {
-    const activeTiles = document.querySelectorAll(".tile.active");
-    activeTiles.forEach(tile => tile.classList.remove("active"));
+    const tiles = document.querySelectorAll(".tile");
+    tiles.forEach(tile => tile.remove());
+    let newSize = 16;
+    createGrid(newSize);
 }
 
-createGrid();
+createGrid(16);
 const clearButton = document.querySelector(".clear-button");
 clearButton.addEventListener("click", clearGrid);
