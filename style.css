@@ -1,6 +1,6 @@
 :root {
     --container-size: 680px;
-    --tile-size: 40px;
+    --tile-size: 42.5px;
 }
 
 body {
@@ -24,7 +24,6 @@ body {
     background-color: black;
     width: var(--tile-size);
     height: var(--tile-size);
-    margin: 1px;
     transition: background-color 0.125s ease;
 }
 
