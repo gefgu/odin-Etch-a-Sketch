@@ -25,7 +25,10 @@ function makeActive() {
 function clearGrid() {
     const tileSections = document.querySelectorAll(".tile-section");
     tileSections.forEach(tile => tile.remove());
-    let newSize = 16;
+    let newSize = +prompt("Enter Grid Size: (Max: 100) (Invalid inputs result in 16x16 grid)", 16);
+    if (newSize > 100 || isNaN(newSize)) {
+        newSize = 16;
+    }
     createGrid(newSize);
 }
 
