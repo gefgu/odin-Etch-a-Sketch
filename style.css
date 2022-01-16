@@ -38,10 +38,6 @@ h1 {
     transition: background-color 0.125s ease;
 }
 
-.tile.active {
-    background-color: black;
-}
-
 .tile-section {
     flex: auto;
     display: flex;
