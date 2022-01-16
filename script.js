@@ -60,5 +60,5 @@ clearButton.addEventListener("click", clearGrid);
 const areaSlider = document.querySelector("#grid-size-slider");
 areaSlider.addEventListener("input", updateGridSize);
 
-const buttons = document.querySelectorAll(".buttons button");
+const buttons = document.querySelectorAll(".buttons .modes");
 buttons.forEach(button => button.addEventListener("click", activeButton));
