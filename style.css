@@ -1,6 +1,5 @@
 :root {
     --container-size: 768px;
-    --tile-size: 48px;
 }
 
 body {
@@ -16,18 +15,22 @@ body {
 
 .container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: var(--container-size);
     height: var(--container-size);
 }
 
 .tile {
     background-color: black;
-    width: var(--tile-size);
-    height: var(--tile-size);
+    flex: auto;
     transition: background-color 0.125s ease;
 }
 
 .tile.active {
     background-color: white;
+}
+
+.tile-section {
+    flex: auto;
+    display: flex;
 }

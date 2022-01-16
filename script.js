@@ -1,9 +1,13 @@
 function createGrid(size) {
     const container = document.querySelector(".container");
+
     for (let i = 0; i < size; i++) {
+        const tileSection = document.createElement("div");
+        tileSection.classList.add("tile-section")
         for (let k = 0; k < size; k++) {
-            container.appendChild(createTile());
+            tileSection.appendChild(createTile());
         }
+        container.appendChild(tileSection);
     }
 }
 
@@ -19,8 +23,8 @@ function makeActive() {
 }
 
 function clearGrid() {
-    const tiles = document.querySelectorAll(".tile");
-    tiles.forEach(tile => tile.remove());
+    const tileSections = document.querySelectorAll(".tile-section");
+    tileSections.forEach(tile => tile.remove());
     let newSize = 16;
     createGrid(newSize);
 }
