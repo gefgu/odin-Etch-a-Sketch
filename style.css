@@ -1,16 +1,28 @@
 :root {
-    --container-size: 400px;
+    --container-size: 512px;
+}
+
+* {
+    font-family: "Verdana", sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    background-color: #e5e5e5;
+}
+
+h1 {
+    text-align: center;
+    font-size: 64px;
+    margin: 64px 0;
+}
+
+.main {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-direction: column;
-    gap: 32px;
 }
 
 .container {
@@ -21,13 +33,13 @@ body {
 }
 
 .tile {
-    background-color: black;
+    background-color: white;
     flex: auto;
     transition: background-color 0.125s ease;
 }
 
 .tile.active {
-    background-color: white;
+    background-color: black;
 }
 
 .tile-section {
@@ -36,7 +48,6 @@ body {
 }
 
 .clear-button {
-    background-color: e5e5e5;
     padding: 4px 16px;
     border: #14213d solid 1px;
     border-radius: 8px;
