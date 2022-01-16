@@ -15,12 +15,17 @@ function createGrid() {
 function createTile() {
     const tile = document.createElement("div");
     tile.classList.add("tile");
-    tile.addEventListener("mouseenter", makeActive);
+    tile.addEventListener("mouseenter", addColor);
     return tile;
 }
 
-function makeActive() {
-    this.classList.add("active");
+function addColor() {
+    const activeMode = document.querySelector(".buttons .active");
+    if (activeMode.id == "color-mode") {
+        this.classList.add("active");
+    } else if (activeMode.id == "rainbow-mode") {
+        this.style.backgroundColor = generateRandomColor();
+    }
 }
 
 function clearGrid() {
@@ -35,8 +40,24 @@ function updateGridSize() {
     clearGrid();
 }
 
+function generateRandomColor() {
+    const randomColor = Math.floor((Math.random() * 16**6)).toString(16);
+    return `#${randomColor}`;
+}
+
+function activeButton() {
+    const buttons = document.querySelectorAll(".buttons button");
+    buttons.forEach(button => button.classList.remove("active"));
+    this.classList.add("active");
+}
+
 createGrid(16);
+
 const clearButton = document.querySelector(".clear-button");
 clearButton.addEventListener("click", clearGrid);
+
 const areaSlider = document.querySelector("#grid-size-slider");
 areaSlider.addEventListener("input", updateGridSize);
+
+const buttons = document.querySelectorAll(".buttons button");
+buttons.forEach(button => button.addEventListener("click", activeButton));
