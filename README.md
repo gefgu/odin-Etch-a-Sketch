@@ -1,1 +1,3 @@
-# odin-Etch-a-Sketch
+# Etch a Sketch
+
+![Picture of the app](./etch-a-sketch)
