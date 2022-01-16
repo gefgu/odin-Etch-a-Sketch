@@ -22,7 +22,8 @@ function createTile() {
 function addColor() {
     const activeMode = document.querySelector(".buttons .active");
     if (activeMode.id == "color-mode") {
-        this.style.backgroundColor = "#000000";
+        const selectedColor = document.querySelector(".color-picker").value;
+        this.style.backgroundColor = selectedColor;
     } else if (activeMode.id == "rainbow-mode") {
         this.style.backgroundColor = generateRandomColor();
     }
