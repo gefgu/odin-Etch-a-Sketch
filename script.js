@@ -26,6 +26,8 @@ function addColor() {
         this.style.backgroundColor = selectedColor;
     } else if (activeMode.id == "rainbow-mode") {
         this.style.backgroundColor = generateRandomColor();
+    } else if (activeMode.id == "eraser-mode") {
+        this.style.backgroundColor = "#ffffff";
     }
 }
 
