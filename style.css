@@ -1,5 +1,5 @@
 :root {
-    --container-size: 768px;
+    --container-size: 400px;
 }
 
 body {
@@ -33,4 +33,12 @@ body {
 .tile-section {
     flex: auto;
     display: flex;
+}
+
+.clear-button {
+    background-color: e5e5e5;
+    padding: 4px 16px;
+    border: #14213d solid 1px;
+    border-radius: 8px;
+    font-size: 16px;
 }
