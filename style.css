@@ -43,11 +43,6 @@ h1 {
     display: flex;
 }
 
-.clear-button {
-    border: #14213d solid 1px;
-    border-radius: 8px;
-}
-
 .buttons {
     display: flex;
     flex-direction: column;
@@ -66,8 +61,10 @@ button.active {
 }
 
 .buttons button {
-    padding: 4px 16px;
-    font-size: 16px;
+    padding: 8px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 .color-picker {
