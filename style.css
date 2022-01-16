@@ -21,7 +21,7 @@ body {
 }
 
 .tile {
-    background-color: red;
+    background-color: black;
     width: var(--tile-size);
     height: var(--tile-size);
     margin: 1px;
@@ -29,5 +29,5 @@ body {
 }
 
 .tile.active {
-    background-color: blue;
+    background-color: white;
 }
